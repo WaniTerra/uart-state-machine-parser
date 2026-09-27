@@ -33,6 +33,7 @@ typedef enum
 
 void *receiver_thread(void *arg)
 {
+    (void)arg;
     State state = WAIT_HEAD1;
     uint8_t byte;
     uint8_t recv_buf[sizeof(RocketData)];
@@ -102,6 +103,7 @@ void *receiver_thread(void *arg)
 
 void *consumer_thread(void *arg)
 {
+    (void)arg;
     while (1)
     {
         pthread_mutex_lock(&mutex);

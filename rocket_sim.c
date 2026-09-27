@@ -37,7 +37,7 @@ int main() {
 
         uint8_t checksum = 0;
       
-        for(int i = 0; i < sizeof(RocketData); i++) {
+        for(size_t i = 0; i < sizeof(RocketData); i++) {
             checksum ^= tx_buffer[2 + i];
         }
        
